@@ -67,6 +67,7 @@ jobs:
 
   build-heroku-image:
     name: Publish to Heroku
+    needs: [build-docker-image]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
